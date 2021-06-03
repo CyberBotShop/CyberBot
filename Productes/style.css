@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+::selection{
+  color: #fff;
+  background: #199CA4;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #5ad2d8;
+  padding: 0 20px;
+  padding-top: 8rem
+}
+
+/* #cart-panel {
+  padding: 2rem;
+  height: 100vh;
+  width: 40vw;
+  background-color: aqua;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  z-index: 100;
+}
+#cart-panel.open {
+  transform: translateX(0%);
+}
+#cart-panel #cart-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+} */
+/* .wrapper{
+  /* position: relative; */
+  /* max-width: 1130px; */
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0; */
+/* } */ 
+.cards{
+  position: relative;
+  /* max-width: 1130px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+}
+@media (max-width: 1200px) {
+  .wrapper .cards .card {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+@media (max-width: 685px) {
+  .wrapper .cards .card {
+    flex: 0 0 100%;
+  }
+}
+.wrapper .cart-nav{
+  position: absolute;
+  right: 1rem;
+  top: 5%;
+  width: 130px;
+  background: #fff;
+  padding: 13px 15px;
+  border-radius: 3px;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-evenly;
+  box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.15);
+}
+.content-title{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 60px;
+  color: white;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+.content-title:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #b80000;
+}
+.content-title:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #b80000;
+}
+
+
+
+.cart-nav .icon{
+  color: #f15757;
+}
+.cart-nav .icon i{
+  font-size: 20px;
+}
+.cart-nav .icon span{
+  font-weight: 500;
+}
+.cart-nav .item-count{
+  font-size: 15px;
+  height: 23px;
+  width: 23px;
+  color: #1ebb19;
+  background: #ffffff;
+  text-align: center;
+  line-height: 22px;
+  border: 1px solid #5ad2d8;
+  border-radius: 50%;
+}
+.wrapper .card{
+  flex: 0 0 calc(25% - 2rem);
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  /* width: calc(33% - 13px); */
+  overflow: hidden;
+  box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.15);
+  /* margin-left: 20px; */
+  /* margin-right: 20px; */
+  margin-bottom: 2rem;
+}
+.wrapper .card img{
+  width: 100%;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  object-fit: contain;
+}
+.card:hover img{
+  transform: scale(1.1);
+}
+.wrapper .card .content{
+  position: absolute;
+  width: 100%;
+  bottom: -50%;
+  background: #fff;
+  padding: 10px 20px 22px 20px;
+  box-shadow: 0px -3px 10px 0px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+.wrapper .card:hover .content{
+  bottom: 0;
+}
+.card .content .row,
+.content .buttons{
+  display: flex;
+  justify-content: space-between;
+}
+.content .row .details span{
+  font-size: 22px;
+  font-weight: 500;
+}
+.content .row .details p{
+  color: #333;
+  font-size: 17px;
+  font-weight: 400;
+}
+.content .row .price{
+  color: #f55313;
+  font-size: 25px;
+  font-weight: 600;
+}
+.content .buttons{
+  margin-top: 20px;
+}
+.content .buttons button{
+  width: 100%;
+  padding: 9px 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 3px;
+  border: 2px solid #5ad2d8;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.buttons button:first-child{
+  color: #5ad2d8;
+  margin-right: 10px;
+  background: #fff;
+}
+button:first-child:hover{
+  color: #fff;
+  background: #5ad2d8;
+}
+.buttons button:last-child{
+  color: #fff;
+  margin-left: 10px;
+  background: #5ad2d8;
+}
+button:last-child:hover{
+  background: #5ad2d8;
+  border-color: #5ad2d8;
+}
